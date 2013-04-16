@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
     The `cmd` command run cmd.exe on host machine with Vagrant environment ( PATH, GEM_HOME ...)
   DESC
 
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/nazoking/vagrant_cmd"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

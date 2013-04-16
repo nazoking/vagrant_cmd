@@ -7,7 +7,12 @@ module VagrantCmd
       args = ARGV.dup.drop_while{|i| i != "cmd" }
       args.shift
       env = {
-        "PATH" => File.join(@env.gems_path,'bin')+';'+ENV["PATH"]
+        "PATH" => [
+          File.join(@env.gems_path,'bin'),
+          File.join(ENV["EMBEDDED_DIR"],"mingw","bin"),
+          ENV["PATH"]
+      ].join(";"),
+        "GEM_HOME" => @env.gems_path.to_s
       }
       if args.size > 0
         args.unshift("/c")
@@ -19,3 +24,4 @@ module VagrantCmd
     end
   end
 end
+
