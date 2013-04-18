@@ -1,25 +1,31 @@
 # VagrantCmd
 
-Vagrant plugin. execute windows cmd.exe with Vagrant environment variable
- on windows host. PATH, GEM_HOME, ...
+This is a Vagrant 1.1+ plugin that adds an cmd command to Vagrant, 
+execute windows cmd.exe with Vagrant environment variable
+on windows host. PATH, GEM_HOME, ...
 
-Vagrant for windows embedded ruby, gem, and MinGW system ( Minimalist GNU for Windows ).
+Vagrant for windows installer embedded ruby, gem, MinGW system ( Minimalist GNU for Windows ), ruby-devkit.
 
 ## Installation
 
-Install Vagrant 1.1 and execute 
+Install Vagrant 1.1+ and execute 
 
-    $ vagrant plugin install vagrant_cmd
+    C:\vagrant> vagrant plugin install vagrant_cmd
 
 ## Usage
 
-execute cmd.exe
-    $ vagrant cmd
+execute cmd.exe on Vagrant environment.
 
-and You can execute ruby, gem, ls ( MinGW commands ), ....
+    C:\vagrant> vagrant cmd
+    Microsoft Windows [Version 6.1.7601]
+    Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+    [VAGRANT]C:\vagrant>
+
+and You can execute ruby, gem, ls ( MinGW commands ), .... 
 
 execute gem
-    $ vagrant cmd gem
+    > vagrant cmd gem
 
 
 ## Contributing
